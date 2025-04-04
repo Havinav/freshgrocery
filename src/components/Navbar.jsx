@@ -5,7 +5,7 @@ import PathUtils from "../pages/PathUtils";
 import Cards from "../pages/Cards";
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <div>
       <nav class="bg-blue-500 border-gray-200 dark:bg-gray-900 fixed top-0 w-full">
@@ -34,7 +34,7 @@ const Navbar = () => {
               {isLoggedIn ? (
                 <Link to={PathUtils.DETAILS}>Gopal</Link>
               ) : (
-                <div>Login</div>
+                <Link to={PathUtils.SIGNIN}>Login</Link>
               )}
             </span>
             <Link
